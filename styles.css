@@ -1,30 +1,69 @@
 body {
+    background-color: #6552D0; /* Blue background */
+    color: #ffffff; /* White text */
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #343a40;
+}
+
+.bg-light-grey {
+    background-color: #A5A5A5; /* Light grey background */
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #ffffff !important; /* White color for nav links */
+}
+
+.nav-link:hover {
+    color: #d1e7ff !important; /* Lighter blue on hover */
+}
+
+.container {
+    background-color: #A5A5A5; /* Light grey background for the container */
+    color: #343a40; /* Dark text for the container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #007bff;
-}
-
-p {
-    font-size: 1.1em;
+    color: #6552D0; /* Purple color for the heading */
 }
 
 .footer {
-    background-color: #e9ecef;
+    background-color: #6552D0; /* Blue background for the footer */
     padding: 20px 0;
+    border-top: none; /* Remove the white line across the footer */
 }
 
 .footer .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    color: #343a40; /* Dark text for the footer */
+    background-color: #A5A5A5; /* Light grey background for the footer banner */
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .footer .btn {
     margin-left: 10px;
+    color: #343a40 !important; /* Dark text for the buttons */
+    border-color: #343a40 !important; /* Dark border for the buttons */
+    text-align: center; /* Center the text on the buttons */
+}
+
+.footer .btn-outline-primary:hover,
+.footer .btn-outline-dark:hover {
+    background-color: #343a40 !important; /* Dark background on hover */
+    color: #ffffff !important; /* White text on hover */
+    border-color: #343a40 !important; /* Dark border on hover */
 }
 
 .img-fluid {
@@ -33,16 +72,49 @@ p {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+    text-align: center; /* Center the text on the buttons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
 }
 
 .btn-outline-primary {
-    border-color: #007bff;
-    color: #007bff;
+    border-color: #343a40;
+    color: #343a40;
+    text-align: center; /* Center the text on the buttons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    transform: scale(1.1);
 }
 
 .btn-outline-dark {
     border-color: #343a40;
     color: #343a40;
+    text-align: center; /* Center the text on the buttons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to elements */
+.animate__fadeIn {
+    animation: fadeIn 2s ease-in-out;
 }

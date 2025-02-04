@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("emSUmiU5VwILILSuf"); // Replace with your EmailJS user ID
+        })();
+    </script>
 </head>
 <body>
-    <header>
+    <header class="bg-light-grey">
         <!-- Include the navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">Tyler Paccione</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,25 +50,25 @@
         <p>Phone: <a href="tel:+12038334608">203-833-4608</a></p>
         <p>GitHub: <a href="https://github.com/TylerPatch11" target="_blank">TylerPatch11</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/tyler-paccione-a5320228b/" target="_blank">Tyler Paccione</a></p>
-        <form>
+        <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
             </div>
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
+    <footer class="footer mt-auto py-3 bg-light-grey">
+        <div class="container text-center">
             <span class="text-muted">Connect with me on social media:</span>
             <a href="https://www.linkedin.com/in/tyler-paccione-a5320228b/" class="btn btn-outline-primary ml-2"><i class="fa fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/TylerPatch11" class="btn btn-outline-dark ml-2"><i class="fa fa-github"></i> GitHub</a>
@@ -72,5 +78,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_1gm2v7a', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    alert('Failed to send email. Please try again later.');
+                });
+        });
+    </script>
 </body>
 </html>

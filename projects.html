@@ -6,12 +6,13 @@
     <title>Tyler Paccione's Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="bg-light-grey">
         <!-- Include the navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">Tyler Paccione</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,6 +29,9 @@
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="hobbies.html">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
@@ -36,28 +40,27 @@
     </header>
 
     <div class="container mt-5">
-        <!-- Your projects content here -->
+        <h2 class="animate__animated animate__fadeIn">Projects</h2>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
-                    <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                <div class="card animate__animated animate__fadeIn">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/dqLALNFL_4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="card-body">
                         <h5 class="card-title">Project 1</h5>
-                        <p class="card-text">Description of Project 1.</p>
+                        <p class="card-text">I'm excited to share a game development project that I undertook with my peer, Griffin Nemeto. In this collaborative endeavor, I was responsible for creating all the animations and handling the majority of the coding for player interactions using Unity and C#. This project was not only a chance to connect on a deep, collaborative level in computer science—a field we both passionately enjoy—but also an enjoyable challenge in exchanging ideas and optimizing our program. Currently, this is where our game stands, but I'm looking forward to refining and enhancing it further in the future.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
-                    <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                <div class="card animate__animated animate__fadeIn">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/V9ExbKAeP_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="card-body">
                         <h5 class="card-title">Project 2</h5>
-                        <p class="card-text">Description of Project 2.</p>
-                    </div>
+                        <p class="card-text">I embarked on a Candy Land game project that involved crafting over 1600 lines of code by clearly understanding the game's requirements and structuring the workload into achievable segments. I developed a code skeleton to define core components such as the game board, players, and logic. Looking back, deeper initial research and more collaboration could have made the process more efficient. Overcoming challenges like refining inefficient algorithms highlighted the value of adaptability and iterative refinement in software development.</p>                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card animate__animated animate__fadeIn">
                     <img src="project3.jpg" class="card-img-top" alt="Project 3">
                     <div class="card-body">
                         <h5 class="card-title">Project 3</h5>
@@ -68,8 +71,8 @@
         </div>
     </div>
 
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
+    <footer class="footer mt-auto py-3 bg-light-grey">
+        <div class="container text-center">
             <span class="text-muted">Connect with me on social media:</span>
             <a href="https://www.linkedin.com/in/tyler-paccione-a5320228b/" class="btn btn-outline-primary ml-2"><i class="fa fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/TylerPatch11" class="btn btn-outline-dark ml-2"><i class="fa fa-github"></i> GitHub</a>
